@@ -10,7 +10,11 @@ public class PrimitiveTypes {
     double salary = 1500;
 
     String name = "user";
+    char gender = 'M';
     System.out.println(name);
+    System.out.println(gender);
+
+    boolean bloodDonator = true;
 
     System.out.println(age);
     System.out.println(year);
