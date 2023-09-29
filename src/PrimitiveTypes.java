@@ -22,6 +22,7 @@ public class PrimitiveTypes {
     System.out.println(id);
     System.out.println(PI);
     System.out.println(salary);
+    System.out.println(bloodDonator);
     System.out.println("--------------");
 
     //Differences between Variables and CONSTANTS
