@@ -1,24 +1,24 @@
 package edu.javacourse.messenger;
 
+import edu.javacourse.messenger.apps.FacebookMessenger;
+import edu.javacourse.messenger.apps.InstantMessageServices;
+import edu.javacourse.messenger.apps.MSNMessenger;
+import edu.javacourse.messenger.apps.Telegram;
+
 public class UserComputer {
     public static void main(String[] args) {
-        System.out.println("--------------------------------");
-        System.out.println("MSN");
-        MSNMessenger messenger = new MSNMessenger();
-        messenger.sendMessage();
-        messenger.receiveMessage();
+        InstantMessageServices smi = null;
 
-        System.out.println("--------------------------------");
-        System.out.println("Facebook");
-        FacebookMessenger face = new FacebookMessenger();
-        face.sendMessage();
-        face.receiveMessage();
+        String chosenApp = "tlg";
 
-        System.out.println("--------------------------------");
-        System.out.println("Telegram");
-        Telegram telegram = new Telegram();
-        telegram.sendMessage();
-        telegram.receiveMessage();
-        System.out.println("--------------------------------");
+        if (chosenApp.equals("msn"))
+            smi = new MSNMessenger();
+        else if (chosenApp.equals("fbm"))
+            smi = new FacebookMessenger();
+        else if (chosenApp.equals("tlg"))
+            smi = new Telegram();
+
+        smi.sendMessage();
+        smi.receiveMessage();
     }
 }
